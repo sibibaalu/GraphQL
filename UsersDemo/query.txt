@@ -1,0 +1,68 @@
+{
+  user(id:"28"){
+    id
+    firstName
+    age
+  }
+}
+------------------------------------------------------
+{
+  key1: company(id: "2") {
+    ...companyDetails
+    users {
+      company {
+        name
+      }
+    }
+  }
+}
+-------------------------------------------------------
+{
+  key1: company(id: "2") {
+    ...companyDetails
+    users {
+      company {
+        name
+      }
+    }
+  }
+  key2: company(id: "1") {
+    ...companyDetails
+    users {
+      company {
+        name
+      }
+    }
+  }
+}
+
+fragment companyDetails on Company {
+  id
+  name
+  description
+}
+--------------------------------------------------------
+mutation{
+  addUser(firstName: "DTS",age:29){
+   	id
+    firstName
+    age
+  }      
+}
+--------------------------------------------------------
+mutation{
+  deleteUser(id:"qif2liS"){
+   	id
+    firstName
+    age
+  }      
+}
+---------------------------------------------------------
+mutation{
+  editUser(id:"42zmfiL",firstName:"Illakiya",age:"30"){
+    id
+    firstName
+    age
+  }
+}
+----------------------------------------------------------

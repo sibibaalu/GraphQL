@@ -1,0 +1,65 @@
+mutation{
+  addSong(title:"Vanthada Paal Karan"){
+    id  
+  }
+}
+-------------------------------------------------------------------------------------
+mutation{
+  addLyricToSong(content:"Pasu Matta pathi padaporan", songId:"5f43efb63337334e00a9c01a"){
+    id
+    title
+    lyrics {
+      id
+    }
+  }
+}
+---------------------------------------------------------------------------------------
+mutation AddSong($title : String){
+  addSong(title:$title){
+    id  
+  }
+}
+query variable --
+{
+  "title": "En peru padayapaa"
+}
+------------------------------------------------------------------------------------------
+
+mutation DeleteSong($id: ID) {
+  deleteSong(id: $id) {
+    id
+  }
+}
+query variable --
+{
+  "id": "5f44e5a91b753e76ecffd80e"
+}
+---------------------------------------------------------------------------------------------
+query fetchSong($id: ID!){
+  song(id: $id) {
+    id
+    title
+    lyrics {
+      content
+    }
+  }
+}
+query variable --
+{"id": "5f44c1154d75d873fc0efabd"}
+---------------------------------------------------------------------------------------------
+mutation addLyrics($content: String,$id: ID!){
+  addLyricToSong(content:$content, songId:$id){
+    id
+    title
+    lyrics{
+      id
+      likes
+      content
+    }
+  }
+}
+
+{"content": "Adunga da enna suthi! Ayanarru vettu Kathi!", "id":"5f44df2c1b753e76ecffd80a"}
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------

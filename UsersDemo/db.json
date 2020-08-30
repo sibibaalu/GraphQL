@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "28",
+      "firstName": "Sibi",
+      "age": "26",
+      "companyId": "1"
+    },
+    {
+      "id": "18",
+      "firstName": "Raja",
+      "age": "30",
+      "companyId": "2"
+    },
+    {
+      "id": "46",
+      "firstName": "Balu",
+      "age": "64",
+      "companyId": "3"
+    },
+    {
+      "id": "48",
+      "firstName": "Dhanam",
+      "age": "53",
+      "companyId": "2"
+    },
+    {
+      "firstName": "Illakiya",
+      "age": "30",
+      "id": "42zmfiL"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "Iphone"
+    },
+    {
+      "id": "2",
+      "name": "Microsoft",
+      "description": "Azure"
+    },
+    {
+      "id": "3",
+      "name": "Google",
+      "description": "Search"
+    }
+  ]
+}
